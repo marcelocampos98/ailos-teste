@@ -1,0 +1,13 @@
+@import "../../../../assets/scss/colors.scss";
+
+.input-error {
+  color: $red;
+  margin: 2px;
+  display: block;
+  min-height: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

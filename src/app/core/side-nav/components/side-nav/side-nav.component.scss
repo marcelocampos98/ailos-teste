@@ -1,0 +1,25 @@
+@import "../../../../../assets/scss/colors.scss";
+
+.sidenav {
+  width: 100px;
+  background-color: $primary;
+  height: 100%;
+}
+
+.container-logo {
+  padding: 20px;
+  height: 100px;
+}
+
+.container-expand {
+  padding: 0px 40px 15px 40px;
+}
+
+.container-icons-menu {
+  padding: 15px 35px 15px 35px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

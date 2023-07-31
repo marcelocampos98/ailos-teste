@@ -1,0 +1,15 @@
+<button
+  class="btn button {{ type }} {{ size }}"
+  [disabled]="disabled"
+  (click)="click()"
+>
+  <ngx-loading
+    [show]="loading"
+    [config]="{
+      fullScreenBackdrop: false,
+      backdropBackgroundColour: 'rgba(0, 0, 0, 0.15)'
+    }"
+  >
+  </ngx-loading>
+  {{ label }}
+</button>

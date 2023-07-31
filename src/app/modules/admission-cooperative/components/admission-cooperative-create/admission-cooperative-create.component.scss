@@ -1,0 +1,23 @@
+@import "../../../../../assets/scss/typography.scss";
+@import "../../../../../assets/scss/colors.scss";
+
+.content {
+  padding: 25px;
+}
+
+.button-search {
+  margin-top: 23px;
+}
+
+.buttons-footer {
+  display: flex;
+  gap: 15px;
+}
+
+.legend {
+  color: $text-subtle;
+}
+
+.text {
+  color: $black;
+}

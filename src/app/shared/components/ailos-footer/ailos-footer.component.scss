@@ -1,0 +1,10 @@
+@import "../../../../assets/scss/colors.scss";
+
+.footer {
+  height: 80px;
+  background-color: $white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 25px 15px 25px;
+}

@@ -1,0 +1,9 @@
+<ul class="step-list">
+  <li
+    *ngFor="let step of steps"
+    class="step"
+    [ngClass]="{ active: activeStep == step.id }"
+  >
+    <span class="text">{{ step.label }}</span>
+  </li>
+</ul>

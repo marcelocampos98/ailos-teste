@@ -1,0 +1,35 @@
+@import "../../../../assets/scss/colors.scss";
+
+.button {
+  padding: 13px 25px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background-color: $primary;
+  color: $white;
+}
+
+.secondary {
+  border: 1px solid $primary;
+  color: $primary;
+  background-color: transparent;
+}
+
+.md {
+  padding: 13px 25px;
+}
+
+.sm {
+  height: 34px;
+  padding: 6px 25px;
+}
+
+.lg {
+  height: 64px;
+  padding: 20px 40px;
+}

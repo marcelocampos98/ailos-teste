@@ -1,0 +1,11 @@
+<div class="d-column w-100">
+  <label>{{ label }}</label>
+  <input
+    class="input"
+    [ngClass]="{ error: control?.invalid && control?.touched }"
+    [placeholder]="placeholder"
+    [mask]="mask"
+    [formControl]="control"
+  />
+  <ailos-input-error [control]="control"></ailos-input-error>
+</div>

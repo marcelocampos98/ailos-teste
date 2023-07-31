@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/colors.scss";
+@import "./assets/scss/bootstrap.overide.scss";
+@import "./assets/scss/fonts.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $background;
+  margin: 0px;
+  height: 100%;
+}
+
+input:focus-visible {
+  outline: none;
+}

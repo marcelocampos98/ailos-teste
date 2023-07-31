@@ -1,0 +1,12 @@
+<div class="sidenav">
+  <div class="container-logo">
+    <img src="../../../../../assets/imgs/ailos-logo.png" alt="ailos logo" />
+  </div>
+  <div class="container-expand">
+    <img src="../../../../../assets/imgs/burger.png" alt="expandir menu" />
+  </div>
+
+  <div class="container-icons-menu" *ngFor="let menu of menus">
+    <img [src]="menu.icon" [alt]="menu.alt" />
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<div class="content">
+  <div class="row">
+    <ailos-stepper [steps]="steps" [activeStep]="activeStep"></ailos-stepper>
+    <p class="page-title">Informe o CPF do futuro cooperado (a)</p>
+    <p class="legend">
+      Se necessário, você poderá duplicar uma conta existente ou pausar e
+      retomar este cadastro futuramente. Digite apenas os números (sem pontos ou
+      traços).
+    </p>
+    <ailos-input
+      class="col-md-3 d-flex align-items-end"
+      [label]="'CPF'"
+      [mask]="'000.000.000-00'"
+      [placeholder]="'000.000.000-00'"
+      [control]="form.get('document')"
+    ></ailos-input>
+    <ailos-button
+      class="col-md-3 button-search"
+      [label]="'Consultar por CPF'"
+      [size]="'sm'"
+      [type]="'primary'"
+      [disabled]="cooperated"
+      [loading]="loading"
+      (onClick)="searchByDocument()"
+    ></ailos-button>
+  </div>
+  <div class="row mt-4" *ngIf="cooperated">
+    <ailos-card
+      class="col-md-3"
+      [title]="'Situação cadastral do CPF'"
+      [subTitle]="'Consulta na Receita Federal'"
+    >
+      <div class="d-flex mb-2 mt-4 gap-3">
+        <img
+          src="../../../../../assets/imgs/icone_user.svg"
+          alt="Usuário"
+          width="32px"
+          height="32px"
+        />
+        <div class="d-flex flex-column">
+          <span class="legend">Nome</span>
+          <p class="text">{{ cooperated.name }}</p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-2 mt-2 gap-3">
+        <img
+          src="../../../../../assets/imgs/icone-check.svg"
+          alt="Usuário"
+          width="32px"
+          height="32px"
+        />
+        <div class="d-flex flex-column">
+          <span class="legend">Situação do CPF</span>
+          <p class="text">{{ cooperated.documentStatus }}</p>
+        </div>
+      </div>
+    </ailos-card>
+    <ailos-card
+      *ngFor="let account of cooperated.accounts"
+      class="col-md-3"
+      [title]="account.type"
+      [subTitle]="account?.bank"
+    >
+      <div class="d-flex mb-2 mt-4 gap-3">
+        <img
+          src="../../../../../assets/imgs/icone_cards.svg"
+          alt="Usuário"
+          width="32px"
+          height="32px"
+        />
+        <div class="d-flex flex-column">
+          <span class="legend">Número da conta</span>
+          <p class="text">{{ account.number }}-{{ account.digit }}</p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-2 mt-2">
+        <ailos-button
+          [label]="'Duplicar conta'"
+          [size]="'md'"
+          [type]="'secondary'"
+        ></ailos-button>
+      </div>
+    </ailos-card>
+  </div>
+</div>
+
+<ailos-footer>
+  <div class="buttons-footer">
+    <ailos-button
+      *ngIf="cooperated"
+      [label]="'Iniciar nova admissão'"
+      [size]="'md'"
+      [type]="'primary'"
+    ></ailos-button>
+    <ailos-button
+      [label]="'Dicas para abertura da conta'"
+      [size]="'md'"
+      [type]="'secondary'"
+    ></ailos-button>
+  </div>
+</ailos-footer>
